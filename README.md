@@ -1,16 +1,6 @@
-# Svelte Snowpack Template
+# Unicorn Generator
 
-A `snowpack` template for `svelte`.
-
-Configured with `jest`, `eslint`, `postcss`, `tailwind`, and `rollup` (for production builds).
-
-# Usage
-
-To use this template:
-
-```bash
-npx create-snowpack-app --template @joshnuss/svelte-snowpack-template --target path/to/dir
-```
+Generates random business ideas. Most are pretty horrible.
 
 ## Available Scripts
 
@@ -38,6 +28,10 @@ Formats all files according to rules defined in `.eslintrc.js`.
 
 Builds a static copy of your site to the `build/` folder.
 Your app is ready to be deployed!
+
+### yarn deploy
+
+Deploys using `vercel`.
 
 # License
 
