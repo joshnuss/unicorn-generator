@@ -5,7 +5,7 @@
     "test": "jest",
     "lint": "eslint",
     "format": "eslint --fix",
-    "deploy": "vercel deploy --production"
+    "deploy": "vercel deploy --prod"
   },
   "dependencies": {
     "svelte": "^3.29.0"
