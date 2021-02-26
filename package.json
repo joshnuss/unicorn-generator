@@ -28,7 +28,6 @@
     "rollup": "^2.35.1",
     "snowpack": "^2.15.0",
     "snowpack-plugin-rollup-bundle": "^0.3.3",
-    "svelte-check": "^1.0.0",
-    "tailwindcss": "^2.0.2"
+    "svelte-check": "^1.0.0"
   }
 }
