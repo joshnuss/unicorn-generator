@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  font-size: 1.4rem;
+  color: #444;
+  background: #f4f4f4;
+  justify-content: center;
+  height: 100vh;
+  font-family: Inter;
+}

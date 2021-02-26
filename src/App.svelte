@@ -1,26 +1,83 @@
 <script>
-  import {onMount} from 'svelte'
-  let count = 0
-  onMount(() => {
-    const interval = setInterval(() => count++, 1000)
-    return () => {
-      clearInterval(interval)
-    }
-  })
+  import { organizations, industries } from './data'
+
+  let candidate, industry
+
+  function randomNumber(max) {
+    return Math.floor(Math.random() * max)
+  }
+
+  function generate() {
+    candidate = organizations[randomNumber(organizations.length)]
+    let list = Object.keys(industries)
+    industry = list[randomNumber(list.length)]
+  }
+
+  generate()
 </script>
 
-<div class="text-gray-600 text-xl flex flex-col items-center justify-center h-screen text-center">
-  test7
-  <img src="/logo.svg" class="animate-bounce h-64 pointer-events-none my-10" alt="logo" />
-  <p class="my-1">Edit <code class="bg-gray-200 p-1">src/App.svelte</code> and save to reload.</p>
-  <p class="my-1">Page has been open for <code class="bg-gray-200 p-1">{count}</code> seconds.</p>
-  <p class="my-4">
-    <a class="text-red-500 font-bold flex items-center justify-center gap-2" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
-      <span>Learn Svelte</span>
+<div class="container">
 
-      <svg class="h-8 w-8 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-      </svg>
-    </a>
-  </p>
+ <h1>
+  Unicorn Generator 🦄
+ </h1>
+
+ <h2>
+  {candidate.name}
+ </h2>
+
+ <p>
+  for
+ </p>
+
+ <h2>
+  {industry}
+ </h2>
+
+ <button type="button" on:click={generate}>
+  Generate another 💡
+ </button>
+
 </div>
+
+<style>
+ .container {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+ }
+
+ h1, h2, p {
+  place-self: center;
+ }
+
+ h1 {
+  background: pink;
+  transform: rotate(-1deg);
+  padding: 1rem;
+  transition: all 0.3s ease;
+ }
+
+ h1:hover {
+  transform: rotate(-3deg)
+ }
+
+ button {
+  margin-top: 2rem;
+  padding: 1rem;
+  min-width: 400px;
+  place-self: center;
+  cursor: pointer;
+  background: #666;
+  color: white;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+    font-size: 1.2rem;
+ }
+
+ button:hover {
+  background: #444;
+  transform: scale(1.1);
+ }
+
+</style>
