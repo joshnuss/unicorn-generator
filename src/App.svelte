@@ -17,27 +17,15 @@
 </script>
 
 <div class="container">
+ <h1>Unicorn Generator 🦄</h1>
 
- <h1>
-  Unicorn Generator 🦄
- </h1>
-
- <h2>
-  {candidate.name}
- </h2>
-
- <p>
-  for
- </p>
-
- <h2>
-  {industry}
- </h2>
+ <h2>{candidate.name}</h2>
+ <p>for</p>
+ <h2>{industry}</h2>
 
  <button type="button" on:click={generate}>
   Generate another 💡
  </button>
-
 </div>
 
 <style>
