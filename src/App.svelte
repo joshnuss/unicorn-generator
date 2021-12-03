@@ -8,9 +8,13 @@
   }
 
   function generate() {
-    candidate = organizations[randomNumber(organizations.length)]
-    let list = Object.keys(industries)
-    industry = list[randomNumber(list.length)]
+    let good = false
+    while (!good) {
+      candidate = organizations[randomNumber(organizations.length)]
+      let list = Object.keys(industries)
+      industry = list[randomNumber(list.length)]
+      good = candidate.industries.indexOf(industry) < 0
+    }
   }
 
   generate()
@@ -19,9 +23,9 @@
 <div class="container">
  <h1>Unicorn Generator 🦄</h1>
 
- <h2>{candidate.name}</h2>
+ <h2 data-testid="company">{candidate.name}</h2>
  <p>for</p>
- <h2>{industry}</h2>
+ <h2 data-testid="industry">{industry}</h2>
 
  <button type="button" on:click={generate}>
   Generate another 💡
