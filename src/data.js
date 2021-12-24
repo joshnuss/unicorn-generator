@@ -131,3 +131,17 @@ organizations.forEach(organization => {
     }
   })
 })
+
+export const emojis = [
+  '✨',
+  '🔥',
+  '🙌',
+  '😂',
+  '😹',
+  '📢',
+  '🌟',
+  '🎈',
+  '🎉',
+  '🎆',
+  '😅'
+]

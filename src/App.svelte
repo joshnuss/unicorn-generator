@@ -1,7 +1,7 @@
 <script>
-  import { organizations, industries } from './data'
+  import { organizations, industries, emojis } from './data'
 
-  let candidate, industry
+  let candidate, industry, emoji
 
   function randomNumber(max) {
     return Math.floor(Math.random() * max)
@@ -13,6 +13,7 @@
       candidate = organizations[randomNumber(organizations.length)]
       let list = Object.keys(industries)
       industry = list[randomNumber(list.length)]
+      emoji = emojis[randomNumber(emojis.length)]
       good = candidate.industries.indexOf(industry) < 0
     }
   }
@@ -32,7 +33,7 @@
   <div class="candidate">
    <h2 data-testid="company">{candidate.name}</h2>
    <p>for</p>
-   <h3 data-testid="industry">{capitalize(industry)} ✨</h3>
+   <h3 data-testid="industry">{capitalize(industry)} {emoji}</h3>
   </div>
 </div>
 
