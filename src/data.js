@@ -1,4 +1,5 @@
 export const organizations = [
+  {name: 'Google', industries: ['software', 'search']},
   {name: 'Shopify', industries: ['e-commerce', 'software']},
   {name: 'Lambda School', industries: ['training', 'software development']},
   {name: 'E-Bay', industries: ['trading', 'platforms']},
@@ -35,6 +36,15 @@ export const organizations = [
   {name: 'Amazon AWS', industries: ['file storage', 'hosting', 'sysops']},
   {name: 'WealthSimple', industries: ['investing']},
   {name: 'PriceLine', industries: ['hotels', 'rentals']},
+  {name: 'Twilio', industries: ['software', 'voip']},
+  {name: 'Etsy', industries: ['software', 'e-commerce']},
+  {name: 'Adobe', industries: ['software', 'graphics']},
+  {name: 'Cisco', industries: ['hardware', 'networking']},
+  {name: 'Costco', industries: ['wholesale']},
+  {name: 'Dollar Tree', industries: ['retail']},
+  {name: 'WalMart', industries: ['retail']},
+  {name: 'PepsiCo', industries: ['beverage']},
+  {name: 'Tesla', industries: ['automotive']},
 ]
 
 export const industries = {
